@@ -25,11 +25,22 @@ The quick way::
 
 Quick start
 =============
-Firstly execute `monkeys startproject` in command line to create a OceanMonkey Project like the following::
-    `monkeys startproject BeBe`
-Then write your crawl logic in gibbons.py under the monkeys' directory::
-Execute the `monkeys run` command under the project's directory finally when you finish your coding work::
-    `cd BeBe`
-    `monkeys run`
+Firstly execute **monkeys startproject** in command line to create a OceanMonkey Project like the following:
+
+    monkeys startproject BeBe
+Then write your crawl logic in gibbons.py under the monkeys' directory.
+
+Execute the **monkeys run** command under the project's directory finally when you finish your coding work:
+
+    cd BeBe
+    monkeys run
 
 
+## Contact
+
+
+|Author          | Email            | Wechat      |
+| ---------------|:----------------:| -----------:|
+| chenzhengqiang | chenzhengqiang@chipscoco.com | Pretty-Style |
+
+**Notice:  Any comments and suggestions are welcomed**
