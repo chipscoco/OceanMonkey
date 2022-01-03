@@ -56,7 +56,6 @@ class WuKong(Gibbon):
             item = {}
             item['author'] = response.xpath('//span[@class="mr20"]/text()').extract_first()
             item['title'] = response.xpath('//h1[@class="f-22 mb15"]/text()').extract_first()
-            item['publish_date'] = response.xpath('//span[@class="mr20 waphide"]/text()').extract_first()
             yield item
             self.start_id += 1
             next_url = "http://www.chipscoco.com/?id={}".format(self.start_id)
