@@ -1,0 +1,3 @@
+include AUTHORS
+include oceanmonkey/VERSION
+recursive-include oceanmonkey/templates *

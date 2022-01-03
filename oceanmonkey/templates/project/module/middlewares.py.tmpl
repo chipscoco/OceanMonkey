@@ -1,0 +1,34 @@
+# Define here the models for OceanMonkey's  download middleware
+
+
+"""
+# Here are a example about how to write a macaque middleware:
+from oceanmonkey import Macaque
+from oceanmonkey import Response
+import random
+import requests
+
+class RandomUserAgentMiddleware(Macaque):
+    def __init__(self):
+        self.__user_agents = [
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:58.0) Gecko/20100101 Firefox/58.0"
+        ]
+
+    # prepare the http request by overriding prepare method
+    def prepare(self, request):
+        request.headers['User-Agent'] = random.choice(self.__user_agents)
+        return request
+
+    def on_request(self, request):
+        resp = requests.get(request.url)
+        return Response(url=request.url, page_source=resp.text,
+                        headers=resp.headers,
+                        status_code=resp.status_code)
+
+    def on_finish(self, response):
+        response.headers['monkey'] = 'OceanMonkey'
+        return response
+"""
+

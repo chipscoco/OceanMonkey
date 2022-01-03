@@ -1,0 +1,22 @@
+from oceanmonkey import Orangutan
+
+
+class ${monkey_name}(Orangutan):
+    def __init__(self):
+        """ initialize a orangutan monkey """
+
+    @classmethod
+    def have_a_monkey(cls, monkey):
+        # construct a orangutan monkey by dependency injection
+        # all variables defined in settings.py
+        # e.g.: cls(host=monkey.get("HOST_NAME"), port=monkey.get("PORT"))
+        return cls()
+
+    def when_wake_up(self):
+        """ do something when OceanMonkey startup """
+
+    def when_sleep(self):
+        """ do something when OceanMonkey closed """
+
+    def process_item(self, item):
+        """ process the item transferred by gibbon monkey """
