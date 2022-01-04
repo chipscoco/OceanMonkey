@@ -2,7 +2,6 @@
 This is the Core Database class
 """
 
-import MySQLdb
 import redis
 
 from oceanmonkey.utils import current_frame
@@ -60,19 +59,20 @@ class Database:
         settings = self.__settings
         config = settings.DATABASES if not kwargs else kwargs
         if self.__db_type == DatabaseType.MYSQL:
-            self.__db_config = config["mysql"] if "mysql" in config else  config
-            try:
-                port = self.__db_config["port"] if "port" in self.__db_config else 3306
-                charset = self.__db_config["charset"] if "charset" in self.__db_config else "utf8"
-                db = MySQLdb.connect(host=self.__db_config["host"],
-                                     user=self.__db_config["username"],
-                                     password=self.__db_config["password"],
-                                     db=self.__db_config["name"],
-                                     port=port,
-                                     charset=charset
-                                     )
-            except (Exception, ) as e:
-                bye.bye(e, fn=__name__, lno=current_frame().f_lineno)
+            # self.__db_config = config["mysql"] if "mysql" in config else  config
+            # try:
+            #     port = self.__db_config["port"] if "port" in self.__db_config else 3306
+            #     charset = self.__db_config["charset"] if "charset" in self.__db_config else "utf8"
+            #     db = MySQLdb.connect(host=self.__db_config["host"],
+            #                          user=self.__db_config["username"],
+            #                          password=self.__db_config["password"],
+            #                          db=self.__db_config["name"],
+            #                          port=port,
+            #                          charset=charset
+            #                          )
+            # except (Exception, ) as e:
+            #     bye.bye(e, fn=__name__, lno=current_frame().f_lineno)
+            pass
 
         elif self.__db_type in {DatabaseType.REDIS, DatabaseType.REDIS_MULTI}:
             self.__db_config = config["redis"] if "redis" in config else config
