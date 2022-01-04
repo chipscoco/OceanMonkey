@@ -4,42 +4,52 @@
 Overview
 ========
 
-OceanMonkey is a High-Level Distributed Web Crawling and Web Scraping framework, used to
-crawl websites and extract structured data from their pages. It can be used for
-a wide range of purposes, from data mining to monitoring and automated testing.
+ceanMonkey is a High-Level Distributed Web Crawling and Web Scraping framework base on multi-process and multi-coroutines, used to
+crawl websites and extract structured data from their pages like the classical scrapy framework.
 
-OceanMonkey was brought to life and is maintained by chenzhengqiang(wechat:Pretty-Style, blog:http://www.chipscoco.com) while teaching the python's web scraping in GuangZhou.
+## Installation guide
 
-Requirements
-============
+### Supported Python versions
 
-* Python 3.5+
-* Works on Linux, Windows, macOS, BSD
+OceanMonkey requires Python 3.5+, either the CPython implementation.
 
-Install
-=======
-
-The quick way to install **OceanMonkey**
+### Installing
+if you’re already familiar with installation of Python packages, you can install OceanMonkey and its dependencies from PyPI with:
 
     pip install oceanmonkey
 
-Quick start
-=============
-Firstly execute **monkeys startproject** in command line to create a OceanMonkey Project like the following:
+Also you can install OceanMonkey by dowloading the project's source code and install it through the setup.py:
+    
+    python setup.py install
 
+## Quick Start
+
+### Create a Monkey Project
+use the monkeys command to create a OceanMonkey Project like the following:
+  
     monkeys startproject BeBe
-Then write your crawl logic in gibbons.py under the monkeys' directory, and write the store logic in orangutans.py.
+or:
 
-Execute the **monkeys run** command under the project's directory finally when you finish your coding work:
+    monkeys strtproject  D:\BeBe
+    
+### Write the scraping logic
+when you execute the startproject command, it will generates two Python script file under the monkeys' directory,
+namely **gibbons.py** and **orangutans.py**. just write the gibbons.py for scraping.
+
+### Write the store logic
+just write the **orangutans.py** for clening and storing items extracted from page source.
+
+### Run the project
+it's so easy to run the project, just execute the run command under the project's directory.
 
     cd BeBe
     monkeys run
     
-## Sample code of parsing the page source
-
+# Sample code 
 ```
 from oceanmonkey import Gibbon
 from oceanmonkey import Request
+from oceanmonkey import Signal,SignalValue
 
 
 class WuKong(Gibbon):
@@ -60,7 +70,9 @@ class WuKong(Gibbon):
             self.start_id += 1
             next_url = "http://www.chipscoco.com/?id={}".format(self.start_id)
             yield Request(url=next_url, callback=self.parse)
+            yield Signal(value=SignalValue.SAY_GOODBYE)
 ```
+detailed usage on OceanMonkey see [https://github.com/chipscoco/OceanMonkey/new/main/docs](https://github.com/chipscoco/OceanMonkey/new/main/docs)
 
 ## Contact
 
