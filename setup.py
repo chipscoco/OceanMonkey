@@ -18,7 +18,6 @@ def has_environment_marker_platform_impl_support():
 
 
 install_requires = [
-    'mysql',
     'redis>=4.0.2',
     'asyncio',
     'w3lib>=1.17.0',
@@ -48,8 +47,9 @@ setup(
     version=version,
     author='薯条老师',
     author_email='haokaixin@chipscoco.com',
+    url='https://github.com/chipscoco/OceanMonkey',
     description='A High-Level Distributed Web Crawling and Web Scraping framework',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     license='BSD',
     packages=find_packages(exclude=("test", "test.*")),
     include_package_data=True,
@@ -58,7 +58,6 @@ setup(
         'console_scripts': ['monkeys = oceanmonkey.cmdline:execute']
     },
     classifiers=[
-        'Framework :: OceanMonkey',
         'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
