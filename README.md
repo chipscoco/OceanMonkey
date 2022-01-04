@@ -4,7 +4,7 @@
 Overview
 ========
 
-ceanMonkey is a High-Level Distributed Web Crawling and Web Scraping framework base on multi-process and multi-coroutines, used to
+OceanMonkey is a High-Level Distributed Web Crawling and Web Scraping framework base on multi-process and multi-coroutines, used to
 crawl websites and extract structured data from their pages like the classical scrapy framework.
 
 ## Installation guide
