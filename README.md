@@ -11,7 +11,7 @@ crawl websites and extract structured data from their pages like the classical s
 
 ### Supported OS
 
-OceanMonkey works on Linux, Windows and macOS.
+    OceanMonkey works on Linux, Windows and macOS.
 
 ### Supported Python versions
 
