@@ -9,6 +9,10 @@ crawl websites and extract structured data from their pages like the classical s
 
 ## Installation guide
 
+### Supported OS
+
+OceanMonkey works on Linux, Windows and macOS.
+
 ### Supported Python versions
 
 OceanMonkey requires Python 3.5+, either the CPython implementation.
@@ -37,7 +41,7 @@ when you execute the startproject command, it will generates two Python script f
 namely **gibbons.py** and **orangutans.py**. just write the gibbons.py for scraping.
 
 ### Write the store logic
-just write the **orangutans.py** for clening and storing items extracted from page source.
+just write the **orangutans.py** for cleaning and storing items extracted from page source.
 
 ### Run the project
 it's so easy to run the project, just execute the run command under the project's directory.
