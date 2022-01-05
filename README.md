@@ -78,7 +78,7 @@ class WuKong(Gibbon):
             yield Request(url=next_url, callback=self.parse)
             yield Signal(value=SignalValue.SAY_GOODBYE)
 ```
-detailed usage on OceanMonkey see [https://github.com/chipscoco/OceanMonkey/tree/main/docs](https://github.com/chipscoco/OceanMonkey/tree/main/docs)
+detailed usage on OceanMonkey see [https://github.com/chipscoco/OceanMonkey/tree/main/docs](https://github.com/chipscoco/OceanMonkey/tree/main/docs).
 
 ## Contact
 
