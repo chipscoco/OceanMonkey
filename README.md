@@ -17,7 +17,7 @@ OceanMonkey's author please visit
 
 ### Supported Python versions
 
-OceanMonkey requires Python 3.5+, either the CPython implementation.
+    OceanMonkey requires Python 3.5+, either the CPython implementation.
 
 ### Installing
 if you’re already familiar with installation of Python packages, you can install OceanMonkey and its dependencies from PyPI with:
