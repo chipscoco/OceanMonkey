@@ -5,9 +5,7 @@ Overview
 ========
 
 OceanMonkey is a High-Level Distributed Web Crawling and Web Scraping framework base on multi-process and multi-coroutines, used to
-crawl websites and extract structured data from their pages like the classical scrapy framework. More information about 
-OceanMonkey's author please visit
-[www.chipscoco.com](http://www.chipscoco.com).
+crawl websites and extract structured data from their pages like the classical scrapy framework.
 
 ## Installation guide
 
